@@ -1,7 +1,7 @@
 {
   "name": "url-to-exec",
-  "version": "0.0.2",
-  "description": "map url to program to execute",
+  "version": "0.0.3",
+  "description": "map url to execute command",
   "preferGlobal": true,
   "main": "index.js",
   "bin": "./index.js",
