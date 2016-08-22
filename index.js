@@ -5,8 +5,9 @@ const execFile      = Promise.promisify(require('child_process').execFile, { mul
 const querystring   = require('querystring');
 const url           = require('url');
 const http          = require('http');
-
-const { PORT, HOST} = require('minimist')(process.argv.slice(2));;
+const argv          = require('minimist')(process.argv.slice(2));
+const PORT          = argv.port || 1234;
+const HOST          = argv.host || 'localhost';
 
 function main() {
     http.createServer((req, resp) => {
@@ -32,7 +33,9 @@ function main() {
         } else {
             resp.end("please specify ?cmd")
         }
-    }).listen(PORT || 1234, HOST || '0.0.0.0');
+    }).listen(PORT, HOST);
+
+    console.log(`listening http://${HOST}:${PORT}`);
 }
 
 if (require.main === module) {
