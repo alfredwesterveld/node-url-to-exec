@@ -1,0 +1,16 @@
+{
+  "name": "url-to-exec",
+  "version": "0.0.1",
+  "description": "map url to program to execute",
+  "main": "index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "minimist": "^1.2.0"
+  }
+}
